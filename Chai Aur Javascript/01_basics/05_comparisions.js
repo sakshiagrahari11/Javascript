@@ -34,3 +34,7 @@ console.log("2" === 2);  //false
 // null == null; // true
 // null == undefined; // true
 // Value such as false, '', '0', and [] are subject to numeric type coercion, all of them coerce to zero
+
+//console.log(1 = 1 = 1) // error
+console.log(1 == 1 == 1) // true  First comparison: 1 == 1 This evaluates to true because 1 is equal to 1. Second comparison: true == 1 Now, JavaScript will compare true and 1 using == (loose equality), which performs type coercion. true is coerced to 1, so the comparison becomes 1 == 1, which is true.
+console.log(1 === 1 === 1) // false  1 === 1 === 1 would first compare 1 === 1, which is true, and then compare true === 1, which is false.

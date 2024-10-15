@@ -5,11 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sakshi Agrahari</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .form-container {
+        margin: 20px;
+    }
+    .output-container {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f1f1f1;
+    }
+    .output-container h3 {
+        margin-bottom: 10px;
+    }
+</style>
+<!-- <style>
+    h1{
+        color: red;
+        display: flex;
+        justify-content: center;
+        margin-top: 250px;
+        font-size: 200px;
+    }
+    body {
+        background-color: #fff;
+
+    }
+</style> --> 
 <body>
-    <h1>Namaste JavaScript</h1>
+    <!-- <h1>SORRY</h1> -->
 
-    <button id="clickMe">Click Me</button>
+   <!-- <button id="clickMe">Click Me</button> -->
 
-    <script src="./promise.js"></script>
+    <!-- <script src="./promise.js"></script> -->
+       
+    
+        <div class="form-container">
+            <h2>Fill the Form</h2>
+            <form id="myForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    
+        <div class="output-container" id="output" style="display: none;">
+            <h3>Form Data:</h3>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+        </div>
+    
+        <script>
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting
+    
+                // Get the values from the form
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+    
+                // Display the form data on the same page
+                document.getElementById('displayName').textContent = name;
+                document.getElementById('displayEmail').textContent = email;
+                document.getElementById('displayMessage').textContent = message;
+    
+                // Show the output container
+                document.getElementById('output').style.display = 'block';
+            });
+        </script>
+    
+    
 </body>
 </html>

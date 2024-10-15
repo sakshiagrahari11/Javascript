@@ -36,3 +36,7 @@ console.log(gameCounter);
 gamecounter++;
 console.log(gameCounter);
 
+console.log("9" + 2);
+console.log("9" - 2);
+console.log("9" * 2);
+console.log("9" / 2);
