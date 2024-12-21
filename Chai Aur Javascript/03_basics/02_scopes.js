@@ -45,3 +45,19 @@ if (true) {
 }
 // console.log(username);
 
+console.log(addOne(5));
+
+function addOne(num) {   // function
+    return num + 1;
+}
+
+console.log(addOne(5));
+
+//console.log(addTwo(9));
+
+const addTwo = function(num){  // expression
+    return num + 2
+}
+
+console.log(addTwo(9));
+
