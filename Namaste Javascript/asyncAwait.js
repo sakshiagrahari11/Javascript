@@ -45,7 +45,23 @@ async function handlePromise() {
     console.log("Namaste Javascript 2");
     console.log(val2);  
 }
-handlePromise();
+//handlePromise();
 
+const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=indore&units=metric&appid=f3eee6f2ac5bed7f8ac868aab900f225"
+
+async function handleAPI(){
+    try
+    {
+        const data = await fetch(API_URL);
+        const jsonValue = await data.json();
+        console.log(jsonValue);        
+    }
+    catch(err){
+        console.log(err);        
+    }
+}
+handleAPI();
+
+handleAPI().catch((err) => console.log(err));
 
 
